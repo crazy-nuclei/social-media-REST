@@ -30,4 +30,10 @@ public class UserDaoService {
 		}
 		return null;
 	}
+
+	public User addUser(User user) {
+		user.setId(++userCount);
+		users.add(user);
+		return user;
+	}
 }
